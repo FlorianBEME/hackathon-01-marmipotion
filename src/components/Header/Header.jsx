@@ -13,7 +13,7 @@ export default function Header({activePotions, toggleActive}) {
   let [display, setDisplay] = useState(false);
 
   useEffect(() => {
-    window.addEventListener("scroll", listenScrollEvent);
+    window.addEventListener("scroll", listenScrollEvent);// eslint-disable-next-line
   }, []);
 
   const listenScrollEvent = (e) => {

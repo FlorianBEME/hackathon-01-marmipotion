@@ -14,7 +14,7 @@ function PotionCard(props) {
             <div className="card-header d-flex flex-column align-items-center ">
                 <h3 className="text-center">{props.potionName}</h3>
                 <figure className="mt-4 p-3 p-sm-0">
-                    <img className="w-100 h-100" src={props.potionImg}/>
+                    <img className="w-100 h-100" src={props.potionImg} alt="potion"/>
                 </figure>
             </div>
             <div className="card-body d-flex justify-content-center align-items-sm-center">
