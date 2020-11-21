@@ -1,0 +1,106 @@
+@import "../../App.css";
+.headerOff {
+  display: none;
+}
+
+.headerOn {
+  background-color: var(--main-color);
+  position: fixed;
+  width: 100%;
+  top: 0;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: var(--spacing-medium) 0;
+  animation-name: smoke;
+  animation-duration: 250ms;
+  z-index: 10;
+}
+
+header h1 {
+  color: var(--secondary-color);
+  font-size: var(--spacing-large);
+  padding: 0 auto;
+  margin: 0;
+}
+
+@keyframes smoke {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.IconsNavbar {
+  width: 40px;
+  height: 40px;
+  /* color: #d4af37; */
+  color: #e9ae60;
+}
+
+h1 span {
+  color: #e9ae60;
+}
+
+.containerIconsNavbar {
+  display: none;
+}
+
+.content-link {
+  display: flex;
+}
+
+.content-link a {
+  text-decoration: none;
+  font-family: var(--secondary-font);
+  color: white !important;
+  margin-left: 48px;
+  cursor: pointer;
+  transition: .2s linear;
+}
+
+.content-link a:hover {
+  color: #e9ae60 !important;
+}
+
+a.active {
+  color: #e9ae60 !important;
+}
+
+@media screen and (min-width: 415px) and (max-width: 768px) {
+  .containerIconsNavbar {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+  }
+  .content-link {
+    display: none;
+  }
+  .headerOn {
+    top: 0;
+  }
+}
+
+@media screen and (max-width: 414px) {
+  .containerIconsNavbar {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+  }
+  .content-link {
+    display: none;
+  }
+  header h1 {
+    display: none;
+  }
+  .headerOn {
+    top: unset;
+    bottom: 0;
+  }
+}
